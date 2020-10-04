@@ -19,7 +19,7 @@ def login():
         return redirect(url_for('course'))
     return render_template('login.html', title='Log In', form=form)
 
-@app.route('/logout')
+@app.route('/logout', methods=['POST'])
 def logout():
     logout_user()
     return redirect(url_for('login'))
