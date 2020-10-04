@@ -115,7 +115,6 @@ html, body {
 
 .datascience, .MachineLearning, .MicroControllers, .webdev {
     float: left;
-    width: 25%;
     height: 100%;
     margin-left: 10px;
     margin-top: 10px;
@@ -128,5 +127,17 @@ html, body {
     margin-right: 20px;
     width: 25%;
     
+}
+
+.vote
+{
+    float: left; clear: left;
+    text-align: center;
+}
+
+.vote img
+{
+    display: block;
+    float: none; clear: both;
 }
     
