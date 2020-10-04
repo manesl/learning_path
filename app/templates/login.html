@@ -2,10 +2,15 @@
 <head>
 <title>Log in Page</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+<link href="static/main.css" rel="stylesheet">
 </head>
 <body>
-<div class="content-section">
-    <h1>Log In</h1>
+<div class= "container"><!--"content-section">-->
+        <h1 style="font-weight: 2000; text-align: center; color: rgb(30, 30, 32);">Welcome to Learning Paths!<br></h1>
+        <h2 style="color: rgb(63, 62, 62); font-size: 20; font-weight: 1000;"> Want to learn a technology from scratch? <br> 
+            Don't know where to start?<br>
+            We got you all sorted!</h2>
+    <h3 style="color: rgb(63, 62, 62);">Log-In (already registerd) </h3>
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
         <p>
@@ -14,19 +19,17 @@
             {% for error in form.email.errors %}
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
-        </p>
-        <p>
             {{ form.password.label }}<br>
             {{ form.password(size=32) }}<br>
             {% for error in form.password.errors %}
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
+        {{ form.remember_me() }} {{ form.remember_me.label }}<br>
+        {{ form.submit() }}
+        <br> New User? <a href="{{ url_for('register') }}">Click to Register!</a>
         </p>
-        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-        <p>{{ form.submit() }}</p>
     </form>
-    <p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
+    <!--<p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>-->
 </div>
 </body>
-
 </html>
