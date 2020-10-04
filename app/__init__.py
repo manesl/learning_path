@@ -7,7 +7,7 @@ from flask_mail import Mail
 
 app = Flask(__name__)
 app.config.from_object(Config)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/lp'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres123@localhost/lp' #'postgresql://localhost/lp'
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)

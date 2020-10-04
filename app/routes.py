@@ -22,7 +22,7 @@ def login():
 @app.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('home'))
+    return redirect(url_for('login'))
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -47,3 +47,25 @@ def course():
         'ghi'
     ]
     return render_template('course.html', title='Courses', courses=courses)
+
+@app.route('/datascience', methods=['POST'])
+def datascience():
+    return render_template("datascience.html")
+
+@app.route('/ml', methods=['POST'])
+def ml():
+    return render_template("ml.html")
+
+#special page
+@app.route('/mc', methods=['POST'])
+def mc():
+    return render_template("mc.html")
+
+@app.route('/web', methods=['POST'])
+def web():
+    return render_template("web.html")
+
+#special learning path 1
+@app.route('/mc_learning_path_1', methods=['POST'])
+def mc_learning_path_1():
+    return render_template("mc_learning_path_1.html")
