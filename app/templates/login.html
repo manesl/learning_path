@@ -1,35 +1,73 @@
-<html>
-<head>
-<title>Log in Page</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-<link href="static/main.css" rel="stylesheet">
-</head>
-<body>
-<div class= "container"><!--"content-section">-->
-        <h1 style="font-weight: 2000; text-align: center; color: rgb(30, 30, 32);">Welcome to Learning Paths!<br></h1>
-        <h2 style="color: rgb(63, 62, 62); font-size: 20; font-weight: 1000;"> Want to learn a technology from scratch? <br> 
-            Don't know where to start?<br>
-            We got you all sorted!</h2>
-    <h3 style="color: rgb(63, 62, 62);">Log-In (already registerd) </h3>
-    <form action="" method="post" novalidate>
-        {{ form.hidden_tag() }}
-        <p>
-            {{ form.email.label(class="form-control-label") }}<br>
-            {{ form.email(size=32) }}<br>
-            {% for error in form.email.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-            {{ form.password.label }}<br>
-            {{ form.password(size=32) }}<br>
-            {% for error in form.password.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        {{ form.remember_me() }} {{ form.remember_me.label }}<br>
-        {{ form.submit() }}
-        <br> New User? <a href="{{ url_for('register') }}">Click to Register!</a>
-        </p>
-    </form>
-    <!--<p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>-->
-</div>
-</body>
-</html>
+
+            <!DOCTYPE html>
+            <html lang='en'>
+                <title> Learning Paths </title>
+                <head>
+                    <link href="../static/main.css" rel="stylesheet">
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+                </head>
+                <body>
+                    <div class="container">
+                        <div class="intro">
+                        <h1 style="font-weight: 200; text-align: center;font-size: 40px; color: white;">Welcome to Learning Paths!<br></h1>
+                        <p style="color: white; font-size: 20px; margin: 0%;">Want to learn a technology from scratch?<br> 
+                            Don't know where to start?<br>
+                            We got you all sorted!</p></p>
+                        </div>
+                        <h3 style="margin-top: 0%;">Sign-in to the website </h3>
+                        <form action="" method="post" novalidate>
+                        {{ form.hidden_tag() }}
+                        <p>
+                        {{ form.email.label(class="form-control-label") }}<br>
+                        {{ form.email(size=32) }}<br>
+                        {% for error in form.email.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                        {{ form.password.label }}<br>
+                        {{ form.password(size=32) }}<br>
+                        {% for error in form.password.errors %}
+                        <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}
+                        <!--{{ form.remember_me() }} {{ form.remember_me.label }}--><br>
+                        {{ form.submit() }}
+                        <br> New User? <a href="{{ url_for('register') }}">Click to Register!</a>
+                    </p>
+                    </form>
+                        <div class="reviews" style="color:white;">
+                            <h2 style="margin-top: 20px;">Reviews</h2>
+                            <p style="font-size: medium; font-weight: 1000;margin:0 auto 20px auto; margin-bottom: 10px;">Your Opinion Matters!</p>
+                            <div class="col1">
+                                <img src="../static/img/girl.jpg" alt="exp" style="width:100px; margin-right: 10px;">
+                                <p style="text-align: left; margin-top:20px; margin-bottom: 0px;">I love the way this website made everything so easy!<br>-Chris Fox</p>                   
+                            </div>
+                                <div class="col2">
+                                <img src="../static/img/local-web-design-creative-background-350x175.jpg" style="width:90px; margin-right: 20px;">
+                                <p style="text-align: left; margin-top:20px; margin-bottom: 0px">Thank you for showing me the best path!<br>-Rebecca Flex.</p>                
+                                </div>
+                            <div class="col3">
+                                    <img src="../static/img/b.png" alt="exp" style="width:100px; margin-right: 10px;">
+                                    <p style="text-align: left; margin-top:20px; margin-bottom: 0px;">I love the way this website made everything so easy!<br>-Chris Fox</p>                   
+                            </div>
+                        </div>
+                        <div class="rowsfordevelopers">
+                            <h1 style="color: white; text-align: center;">Developers</h1>
+                            <div class="col1" style="float: left; width: 20%; height: 100%; margin: 5px;">
+                                <img src="../static/img/formal.jpg" style="height: 300px; background: center no-repeat; width: 300px; float: left;">
+                                <h3 style="color: white; font-size: 30px;">Madhumathi Reddy</h3>
+                            </div>
+                            <div class="col2" style="float: left; width: 20%; height: 100%; margin: 5px;">
+                                <img src="../static/img/shweta.jpg" style="height: 300px;background: center no-repeat; width: 300px; float: left;">
+                                <h4 style="color: white; font-size: 30px;">Shweta Mane</h4>
+                            </div>
+                            <div class="col3" style="float: left; width: 20%; height: 100%; margin: 5px;">
+                                <img src="../static/img/lovetolearn.jpg" style="height: 300px; background: center no-repeat; width: 300px; float: left;">
+                                <h5 style="color: white; font-size: 30px;">Indrashis</h5>
+                            </div>
+                            <div class="col4" style="float: left; width: 20%; height: 100%; margin: 5px;">
+                                <img src="../static/img/webd.jpg" style="height: 300px; width: 300px; float: left;">
+                                <h6 style="color: white; font-size: 30px;">Juahar</h6>
+                            </div>
+                        </div>
+                    </div>
+        </body>
+        </html>
