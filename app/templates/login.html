@@ -3,8 +3,7 @@
             <html lang='en'>
                 <title> Learning Paths </title>
                 <head>
-                    <link href="../static/main.css" rel="stylesheet">
-                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+                    <link href="../static/main1.css" rel="stylesheet">
                 </head>
                 <body>
                     <div class="container">
@@ -18,19 +17,21 @@
                         <form action="" method="post" novalidate>
                         {{ form.hidden_tag() }}
                         <p>
+                        <span style="color: white; font-size: 20px;">
                         {{ form.email.label(class="form-control-label") }}<br>
-                        {{ form.email(size=32) }}<br>
+                        {{ form.email(size=32) }}<br> </span>
                         {% for error in form.email.errors %}
                         <span style="color: red;">[{{ error }}]</span>
                         {% endfor %}
+                        <span style="color: white; font-size: 20px;">
                         {{ form.password.label }}<br>
-                        {{ form.password(size=32) }}<br>
+                        {{ form.password(size=32) }}<br> </span>
                         {% for error in form.password.errors %}
                         <span style="color: red;">[{{ error }}]</span>
                         {% endfor %}
                         <!--{{ form.remember_me() }} {{ form.remember_me.label }}--><br>
                         {{ form.submit() }}
-                        <br> New User? <a href="{{ url_for('register') }}">Click to Register!</a>
+                        <br> <a href="{{ url_for('register') }}" style="color: white; font-size: 20px;"> New User? Click to Register!</a>
                     </p>
                     </form>
                         <div class="reviews" style="color:white;">
