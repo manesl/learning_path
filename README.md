@@ -18,7 +18,7 @@ Making a model based on up-vote counts
 Who are we?
 Essentially a diverse team of students from UC and India, we love to work on projects that helps make people's lives easier and leaves a good impact in this world.
 
-Contibutors:
+Contributors:
 Shweta Mane, 
 Madhumathi Reddy M., 
 M.	Jauhar, 
